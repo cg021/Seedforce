@@ -4,6 +4,28 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
     <link rel="stylesgeet" href="https://rawgit.com/creativetimofficial/material-kit/master/assets/css/material-kit.css">
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif;}
+        
+        
+        /* Modal Content */
+        .modal-content {
+          background-color: #fefefe;
+          margin: auto;
+          padding: 20px;
+          border: 1px solid #888;
+          width: 80%;
+        }
+        
+        /* The Close Button */
+        .close {
+          color: #aaaaaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+        }
+        
+        </style>
 </head>
 
 <body class="profile-page">
@@ -95,7 +117,7 @@
   
             <!--Footer-->
             <div class="modal-footer justify-content-center">
-              <span class="mr-4">Spread the word!</span>
+              <span class="mr-4">Share on social media</span>
               <a type="button" class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook-f"></i></a>
               <!--Twitter-->
               <a type="button" class="btn-floating btn-sm btn-tw"><i class="fa fa-twitter"></i></a>
@@ -142,7 +164,7 @@
   
             <!--Footer-->
             <div class="modal-footer justify-content-center">
-              <span class="mr-4">Spread the word!</span>
+              <span class="mr-4">Share on social media</span>
               <a type="button" class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook-f"></i></a>
               <!--Twitter-->
               <a type="button" class="btn-floating btn-sm btn-tw"><i class="fa fa-twitter"></i></a>
@@ -190,7 +212,7 @@
   
             <!--Footer-->
             <div class="modal-footer justify-content-center">
-              <span class="mr-4">Spread the word!</span>
+              <span class="mr-4">Share on social media</span>
               <a type="button" class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook-f"></i></a>
               <!--Twitter-->
               <a type="button" class="btn-floating btn-sm btn-tw"><i class="fa fa-twitter"></i></a>
@@ -244,7 +266,7 @@
   
             <!--Footer-->
             <div class="modal-footer justify-content-center">
-              <span class="mr-4">Spread the word!</span>
+              <span class="mr-4">Share on social media</span>
               <a type="button" class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook-f"></i></a>
               <!--Twitter-->
               <a type="button" class="btn-floating btn-sm btn-tw"><i class="fa fa-twitter"></i></a>
@@ -292,7 +314,7 @@
   
             <!--Footer-->
             <div class="modal-footer justify-content-center">
-              <span class="mr-4">Spread the word!</span>
+              <span class="mr-4">Share on social media</span>
               <a type="button" class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook-f"></i></a>
               <!--Twitter-->
               <a type="button" class="btn-floating btn-sm btn-tw"><i class="fa fa-twitter"></i></a>
@@ -341,7 +363,7 @@
   
             <!--Footer-->
             <div class="modal-footer d-block d-md-flex justify-content-center">
-              <span class="mr-4">Spread the word!</span>
+              <span class="mr-4">Share on social media</span>
               <a type="button" class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook-f"></i></a>
               <!--Twitter-->
               <a type="button" class="btn-floating btn-sm btn-tw"><i class="fa fa-twitter"></i></a>
@@ -404,14 +426,48 @@
                     </div>
                   </div>
                   <div class="modal-footer border-top-0 d-flex justify-content-center">
-                    <button type="submit" class="btn btn-success">Submit</button>
+                    <button type="submit" class="btn btn-success" id="myBtn">Submit</button>
+                    <div id="myModal" class="modal">
+                        <!-- Modal content -->
+                        <div class="modal-content">
+                          <span class="close">&times;</span>
+                          <p>Success!</p>
+                        </div>
+                      
+                      </div>
                   </div>
                 </form>
               </div>
             </div>
           </div>
     </div>
-
+    <script>
+        // Get the modal
+        var modal = document.getElementById("myModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("myBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+        </script>
   
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
