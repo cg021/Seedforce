@@ -1,0 +1,60 @@
+{
+    "name": "lwc-recipes-oss",
+    "version": "0.2.0",
+    "author": "Salesforce Developer Evangelism",
+    "bugs": "https://github.com/trailheadapps/lwc-recipes-oss/issues",
+    "dependencies": {
+        "compression": "^1.7.4",
+        "express": "^4.17.1",
+        "helmet": "^3.23.3"
+    },
+    "description": "Lightning Web Components Recipes Open Source",
+    "devDependencies": {
+        "@salesforce/wire-service-jest-util": "^2.4.2",
+        "chart.js": "^2.9.3",
+        "d3": "^5.16.0",
+        "husky": "^4.2.5",
+        "jest-canvas-mock": "^2.2.0",
+        "lwc-recipes-oss-ui-components": "^0.3.2",
+        "lint-staged": "^10.2.11",
+        "lwc-services": "^2.1.1",
+        "moment": "^2.27.0",
+        "prettier": "^2.0.5"
+    },
+    "engines": {
+        "node": ">=10.0.0"
+    },
+    "homepage": "https://github.com/trailheadapps/lwc-recipes-oss",
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "keywords": [
+        "lwc"
+    ],
+    "license": "CC0-1.0",
+    "lint-staged": {
+        "**/*.{css,html,js,json,yaml,yml,md}": [
+            "prettier --write"
+        ],
+        "**/modules/**/*.js": [
+            "eslint"
+        ]
+    },
+    "repository": "trailheadapps/lwc-recipes-oss",
+    "scripts": {
+        "build": "lwc-services build --mode production",
+        "build:development": "lwc-services build",
+        "lint": "eslint ./src/**/*.js",
+        "prettier": "prettier --write \"**/*.{css,html,js,json,md,yaml,yml}\"",
+        "prettier:verify": "prettier --list-different \"**/*.{css,html,js,json,md,yaml,yml}\"",
+        "serve": "node scripts/server.js",
+        "test:unit": "lwc-services test:unit",
+        "test:unit:coverage": "lwc-services test:unit --coverage",
+        "test:unit:debug": "lwc-services test:unit --debug",
+        "test:unit:watch": "lwc-services test:unit --watch",
+        "watch": "lwc-services watch",
+        "watch:production": "lwc-services watch --mode=production"
+    }
+}
