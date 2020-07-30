@@ -1,2 +1,1 @@
-# Seedforce
-Seeding diversity together
+
